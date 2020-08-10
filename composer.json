@@ -1,0 +1,27 @@
+{
+    "name": "viodev/php-result",
+    "description": "Result object for php",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "Phillip McKeown",
+            "email": "phillip@viodev.com"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "Viodev\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.1.0"
+    }
+}
