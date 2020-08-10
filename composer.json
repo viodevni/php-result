@@ -17,10 +17,10 @@
             "src/helpers.php"
         ],
         "psr-4": {
-            "Viodev\\": "src/"
+            "Viodev\\": "src"
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0"
