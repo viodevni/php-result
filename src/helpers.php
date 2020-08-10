@@ -20,7 +20,7 @@ if (!function_exists("success")) {
     }
 }
 
-if (!function_exists("success")) {
+if (!function_exists("fail")) {
     /**
      * Represent a fail result
      *
