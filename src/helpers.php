@@ -16,7 +16,7 @@ if (!function_exists("success")) {
      */
     function success(...$args): Viodev\Result
     {
-        return Result::success($args);
+        return call_user_func_array([Result::class, 'success'], $args);
     }
 }
 
@@ -29,6 +29,6 @@ if (!function_exists("fail")) {
      */
     function fail(...$args): Viodev\Result
     {
-        return Result::fail($args);
+        return call_user_func_array([Result::class, 'fail'], $args);
     }
 }
