@@ -27,7 +27,7 @@ if (!function_exists("fail")) {
      * @param mixed ...$args
      * @return \Viodev\Result
      */
-    function success(...$args): Viodev\Result
+    function fail(...$args): Viodev\Result
     {
         return Result::fail($args);
     }
