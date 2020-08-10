@@ -10,11 +10,12 @@ class Result
     public $result = self::SUCCESS;
     public $data = array();
 
-    public function __construct(...$args)
+    public function __construct(array $args)
     {
         foreach($args as $arg){
             if(is_string($arg)){
                 $this->code = $arg;
+                continue;
             }
             if(is_int($arg)) {
                 $this->data['id'] = $arg;
