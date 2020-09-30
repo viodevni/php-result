@@ -17,15 +17,7 @@ class Result
                 $this->code = $arg;
                 continue;
             }
-            if(is_int($arg)) {
-                $this->data['id'] = $arg;
-                continue;
-            }
-            if(is_array($arg)) {
-                foreach ($arg as $key => $value) {
-                    $this->data[$key] = $value;
-                }
-            }
+            $this->data = $arg;
         }
     }
 
