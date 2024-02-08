@@ -7,17 +7,23 @@ class Result
     private const SUCCESS = "success";
     private const FAIL = "fail";
 
-    public $result = self::SUCCESS;
-    public $data = array();
+    public string $result = self::SUCCESS;
+    public ?string $code = null;
+    public array $data = [];
 
-    public function __construct(array $args)
+    private function __construct(array $args)
     {
+        if(count($args) > 2) throw new \Exception('Result class can only be instantiated 2 arguments maximum.');
+
         foreach($args as $arg){
+            if(!is_string($arg) && !is_array($arg)) throw new \Exception('Result arguments can only be of type; string or array.');
+
             if(is_string($arg)){
                 $this->code = $arg;
-                continue;
+            } else {
+                $this->data = $arg;
             }
-            $this->data = $arg;
+
         }
     }
 
@@ -28,12 +34,12 @@ class Result
         return null;
     }
 
-    public static function success(...$args)
+    public static function success(...$args) : Result
     {
         return new static($args);
     }
 
-    public static function fail(...$args)
+    public static function fail(...$args) : Result
     {
         $result = new static($args);
         $result->result = self::FAIL;
