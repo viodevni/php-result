@@ -34,7 +34,7 @@ $result->false EQUALS false
 
 #### Helper function
 ```
-$result = Result::fail('action_fail', [
+$result = fail('action_fail', [
     'error' => 'An error occurred!'
 ]);
 ```
