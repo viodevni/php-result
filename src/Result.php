@@ -2,7 +2,7 @@
 
 namespace Viodev;
 
-#[AllowDynamicProperties]
+#[\AllowDynamicProperties]
 class Result
 {
     private const SUCCESS = "success";
